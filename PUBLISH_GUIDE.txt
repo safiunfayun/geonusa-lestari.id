@@ -1,0 +1,27 @@
+CV GEONUSA LESTARI — V8 FINAL PUBLISH
+
+FINAL TECHNICAL CHECK
+- Multi-page navigation: checked
+- Missing local file references: none
+- Responsive/mobile CSS: present
+- 404 page: included
+- .nojekyll: included
+- Company favicon: included
+- Logo optimized for faster mobile loading
+- Official company contact details: intentionally marked Coming soon
+- No personal email/WhatsApp inserted
+
+GITHUB PAGES PUBLISH
+1. Create a NEW GitHub repository for the company (do not use Safiun's personal portfolio repository).
+2. Recommended repository name: geonusa-lestari
+3. Set repository to Public.
+4. Extract this ZIP and upload ALL files inside it to the repository root.
+5. Commit to main.
+6. Go to Settings > Pages.
+7. Source: Deploy from a branch.
+8. Branch: main, folder: /(root), then Save.
+9. The free URL will normally be:
+   https://YOUR-GITHUB-USERNAME.github.io/geonusa-lestari/
+
+IMPORTANT
+The official company email, WhatsApp Business, address, founder roles, and verified project portfolio can be added later without rebuilding the website.

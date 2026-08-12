@@ -1,0 +1,5 @@
+CV GEONUSA LESTARI — PRE-PUBLISH V7
+
+Contact: intentionally left as Coming soon pending founders' decision.
+GitHub Pages: .nojekyll and 404.html added.
+Local HTML link check: OK

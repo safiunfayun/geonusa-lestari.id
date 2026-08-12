@@ -1,0 +1,8 @@
+{
+  "html_pages_checked": 15,
+  "missing_local_references": [],
+  "pages_without_title": [],
+  "pages_without_viewport": [],
+  "pages_without_responsive_css_except_404": [],
+  "optimized_logo_size_kb": 580.0
+}

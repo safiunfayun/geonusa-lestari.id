@@ -1,0 +1,118 @@
+<!doctype html><html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QGIS Basic | CV Geonusa Lestari</title>
+<meta name="theme-color" content="#214d3a">
+<meta name="description" content="Pelatihan dasar QGIS untuk pemula.">
+<style>
+:root{--forest:#214d3a;--green:#2d6a4f;--green2:#4f8a62;--cream:#f7f4ec;--ink:#24312c;--muted:#6c7973;--line:#dfe7e0;--white:#fff;--gold:#c7a55b;--shadow:0 18px 50px rgba(33,77,58,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#fbfaf6;color:var(--ink);line-height:1.65}a{color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.navwrap{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{height:76px;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:900;color:var(--forest)}.brand img{width:48px;height:48px;object-fit:contain;border-radius:50%;background:#fff}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{text-decoration:none;font-size:14px;font-weight:750;color:#41504a}.navcta{background:var(--forest);color:#fff!important;padding:10px 15px;border-radius:10px}.menubtn{display:none;border:0;background:none;font-size:26px;color:var(--forest)}
+.hero{min-height:690px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(18,54,39,.92),rgba(18,54,39,.55)),radial-gradient(circle at 80% 20%,#91aa8d,#456b57);overflow:hidden}.herogrid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:850;color:#dce8df}.hero h1{font-size:clamp(48px,6vw,76px);line-height:1.02;letter-spacing:-.045em;margin:10px 0 18px}.hero h1 span{color:#d8e8b9}.hero p{font-size:19px;color:#edf4ef;max-width:720px}.chips,.actions,.tags{display:flex;gap:8px;flex-wrap:wrap}.chips{margin-top:24px}.chip{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:700}.actions{margin-top:30px}.btn{display:inline-flex;padding:13px 18px;border-radius:11px;text-decoration:none;font-weight:800}.primary{background:#e5efce;color:var(--forest)}.outline{border:1px solid rgba(255,255,255,.45);color:#fff}.herocard{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:28px;padding:26px;backdrop-filter:blur(10px);box-shadow:var(--shadow)}.herocard img{width:118px;height:118px;object-fit:contain;border-radius:50%;background:#fff;padding:5px}.herocard h3{font-size:28px;margin:18px 0 8px}.herocard p{font-size:14px;color:#dce9e2}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.metric{background:rgba(255,255,255,.08);border-radius:15px;padding:15px}.metric b{display:block;color:#e5efce;font-size:20px}.metric span{font-size:11px;color:#d4e0da}
+.section{padding:90px 0}.sectionhead{max-width:760px;margin-bottom:36px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--green2);font-weight:850}.sectionhead h2{font-size:clamp(34px,4vw,52px);color:var(--forest);line-height:1.08;margin:8px 0 12px}.sectionhead p{color:var(--muted);font-size:17px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;min-height:230px;box-shadow:0 8px 26px rgba(33,77,58,.04)}.service h3{color:var(--forest);font-size:21px}.service p{color:var(--muted);font-size:14px}.num{color:var(--gold);font-weight:900;font-size:12px}.tag{background:#edf3ed;color:#35634d;border-radius:999px;padding:6px 8px;font-size:11px;font-weight:800}
+.training{background:linear-gradient(135deg,#eef4ec,#f8f3e8)}.traininggrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.courses{display:grid;gap:12px}.course{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;justify-content:space-between;gap:16px;align-items:center}.course b{display:block;color:var(--forest)}.course span{font-size:12px;color:var(--muted)}.level{background:#e8f0e5;color:var(--green);padding:6px 9px;border-radius:999px;font-size:11px;font-weight:850}
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.founder{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;text-align:center}.avatar{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;background:linear-gradient(145deg,#dfeadf,#cddcc9);color:var(--forest);font-size:28px;font-weight:900}.founder h3{color:var(--forest);margin:0 0 6px}.founder p{color:var(--muted);font-size:13px;margin:0}
+.cta{background:var(--forest);color:#fff;border-radius:28px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.cta h2{font-size:40px;margin:0 0 10px}.cta p{color:#d9e6df}.cta .primary{background:#fff;color:var(--forest)}
+footer{background:#173b2c;color:#c9d9d0;padding:50px 0 28px}.footergrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.footergrid h4{color:#fff}.footergrid a{display:block;text-decoration:none;color:#c9d9d0;margin:7px 0;font-size:14px}.footerbrand{display:flex;gap:12px;align-items:center}.footerbrand img{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:50%}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:18px;font-size:12px;color:#9fb3aa}
+@media(max-width:980px){.herogrid,.traininggrid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.container{width:calc(100% - 28px)}nav{height:68px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#fbfaf6;padding:16px 18px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menubtn{display:block}.hero{min-height:auto;padding:54px 0}.hero h1{font-size:46px}.hero p{font-size:16px}.actions .btn{width:100%;justify-content:center}.services,.founders{grid-template-columns:1fr}.section{padding:66px 0}.cta{grid-template-columns:1fr;padding:30px 22px}.cta h2{font-size:32px}.footergrid{grid-template-columns:1fr}}
+
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(33,77,58,.05)}
+.pillar .label{display:inline-flex;background:#edf3ed;color:var(--green);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.pillar h3{font-size:27px;color:var(--forest);margin:15px 0 10px}
+.pillar p{color:var(--muted);font-size:15px}
+.pillar ul{margin:18px 0 0;padding-left:20px;color:#43524b}
+.pillar li{margin:7px 0}
+@media(max-width:760px){.pillars{grid-template-columns:1fr}}
+
+
+.pagehero{
+  padding:76px 0 52px;
+  background:
+    radial-gradient(circle at 84% 18%,rgba(126,156,91,.18),transparent 26%),
+    linear-gradient(180deg,#f7f4ec,#eef4ec);
+  border-bottom:1px solid var(--line)
+}
+.pagehero h1{font-size:clamp(44px,6vw,72px);line-height:1.03;color:var(--forest);margin:8px 0 16px}
+.pagehero p{max-width:840px;color:var(--muted);font-size:18px}
+.coursegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.coursecard{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;
+  box-shadow:0 10px 30px rgba(33,77,58,.05);display:flex;flex-direction:column
+}
+.coursecard h3{color:var(--forest);font-size:22px}
+.coursecard p{color:var(--muted);font-size:14px}
+.coursemeta{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 16px}
+.badge{background:#edf3ed;color:var(--green);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:850}
+.coursecard .btn{margin-top:auto;align-self:flex-start;background:var(--forest);color:#fff}
+.trainingflow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.flow{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}
+.flow .n{font-size:12px;color:var(--gold);font-weight:900}
+.flow b{display:block;color:var(--forest);margin:8px 0 5px}
+.flow span{font-size:12px;color:var(--muted)}
+.coursehero{
+  padding:70px 0 46px;
+  background:linear-gradient(135deg,#eef4ec,#f8f3e8);
+  border-bottom:1px solid var(--line)
+}
+.coursehero h1{font-size:clamp(42px,5vw,66px);color:var(--forest);line-height:1.04;margin:8px 0 14px}
+.coursehero p{max-width:760px;color:var(--muted);font-size:17px}
+.course-info{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.info-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;color:#456255}
+.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:34px}
+.modulelist{display:grid;gap:10px}
+.module{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px 18px}
+.module b{color:var(--forest)}
+.module span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.sidebox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;position:sticky;top:96px}
+.sidebox h3{color:var(--forest);font-size:22px}
+.sidebox ul{padding-left:18px;color:var(--muted)}
+.sidebox li{margin:7px 0}
+.outcomes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.outcome{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px}
+.outcome b{display:block;color:var(--forest);margin-bottom:5px}
+.outcome span{font-size:12px;color:var(--muted)}
+@media(max-width:980px){
+  .coursegrid{grid-template-columns:repeat(2,1fr)}
+  .trainingflow{grid-template-columns:repeat(2,1fr)}
+  .twocol{grid-template-columns:1fr}
+  .sidebox{position:static}
+}
+@media(max-width:760px){
+  .pagehero,.coursehero{padding:52px 0 34px}
+  .pagehero h1,.coursehero h1{font-size:40px}
+  .pagehero p,.coursehero p{font-size:15px}
+  .coursegrid,.trainingflow,.outcomes{grid-template-columns:1fr}
+}
+</style><link rel="icon" type="image/png" href="geonusa-logo.png">
+</head><body>
+<div class="navwrap"><div class="container"><nav>
+<a class="brand" href="index.html"><img src="geonusa-logo.png" alt="Logo Geonusa Lestari"><div>CV Geonusa Lestari<small>Geografi • Lingkungan • Alam Lestari Nusantara</small></div></a>
+<button class="menubtn" aria-label="Buka menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+<div class="navlinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="consulting.html">Consulting</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="training.html" style="color:var(--green)">Training</a><a href="team.html">Team</a><a href="contact.html">Contact</a><a class="navcta" href="contact.html">Konsultasi</a></div>
+</nav></div></div>
+<header class="coursehero"><div class="container"><div class="kicker">Training Program</div><h1>QGIS Basic</h1><p>Pelatihan dasar QGIS untuk peserta yang ingin memahami pengelolaan data spasial, editing, styling, analisis dasar, dan pembuatan layout menggunakan software open source.</p><div class="course-info"><span class="info-chip">Beginner</span><span class="info-chip">QGIS</span><span class="info-chip">Open Source</span><span class="info-chip">Practice</span></div></div></header>
+
+<section class="section"><div class="container twocol">
+<div>
+<div class="sectionhead"><div class="kicker">Learning Outcomes</div><h2>Apa yang akan dipelajari?</h2></div>
+<div class="outcomes"><div class="outcome"><b>Interface QGIS</b><span>Memahami project, layer panel, browser, toolbox, dan map canvas.</span></div><div class="outcome"><b>Data & Styling</b><span>Mampu menambahkan, mengatur, dan memvisualisasikan data.</span></div><div class="outcome"><b>Basic Analysis</b><span>Mampu menjalankan geoprocessing dasar.</span></div><div class="outcome"><b>Layout</b><span>Mampu membuat layout peta yang rapi.</span></div></div>
+
+<div class="sectionhead" style="margin-top:52px"><div class="kicker">Syllabus</div><h2>Struktur materi.</h2></div>
+<div class="modulelist"><div class="module"><b>Module 01 — GIS & QGIS Introduction</b><span>Konsep dasar GIS dan interface QGIS.</span></div><div class="module"><b>Module 02 — Spatial Data</b><span>Vektor, raster, atribut, dan format data.</span></div><div class="module"><b>Module 03 — Coordinate Reference System</b><span>CRS, projection, dan pengecekan data.</span></div><div class="module"><b>Module 04 — Symbology & Labels</b><span>Styling, kategori, graduated, dan labeling.</span></div><div class="module"><b>Module 05 — Attribute Table</b><span>Selection, filter, expression, field calculator.</span></div><div class="module"><b>Module 06 — Editing</b><span>Digitizing dan editing atribut.</span></div><div class="module"><b>Module 07 — Processing Toolbox</b><span>Buffer, clip, intersect, dissolve.</span></div><div class="module"><b>Module 08 — Print Layout</b><span>Layout, legend, scale, north arrow, dan export.</span></div></div>
+</div>
+
+<aside class="sidebox">
+<h3>Training Format</h3>
+<ul><li>Concept explanation</li><li>Guided practice</li><li>Exercise dataset</li><li>Discussion & Q&A</li><li>Mini project / practical assignment</li></ul>
+<h3 style="margin-top:24px">Target Participants</h3>
+<p style="color:var(--muted);font-size:14px">Mahasiswa, fresh graduate, staf teknis, surveyor pemula, anggota tim proyek, atau peserta yang ingin membangun kompetensi dasar.</p>
+<a class="btn" style="background:var(--forest);color:#fff;text-decoration:none;margin-top:12px" href="contact.html">Tanya Jadwal & Pelatihan</a>
+</aside>
+</div></section>
+<footer><div class="container"><div class="footergrid">
+<div><div class="footerbrand"><img src="geonusa-logo.png" alt="Logo CV Geonusa Lestari"><div><strong style="color:#fff">CV Geonusa Lestari</strong><br><small>Geografi • Lingkungan • Alam Lestari Nusantara</small></div></div><p>Environmental • Geospatial • Natural Resources Consulting & Training</p></div>
+<div><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="consulting.html">Consulting</a><a href="services.html">Services</a></div>
+<div><h4>Training</h4><a href="training.html">Training Center</a><a href="arcgis-pro-basic.html">ArcGIS Pro Basic</a><a href="basic-field-survey.html">Basic Field Survey</a><a href="qgis-basic.html">QGIS Basic</a></div>
+</div><div class="copyright">© 2026 CV Geonusa Lestari. All rights reserved.</div></div></footer><script>document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks')?.classList.remove('open')));</script>
+</body></html>
